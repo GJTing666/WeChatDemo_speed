@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/components/index/index",
+    "pages/components/personal/personal",
+    "pages/components/navbar/navbar",
+    "pages/components/classify/classify",
+    "pages/components/mycart/mycart"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "快宜点",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": false
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "backgroundColor": "#eeeeee",
+    "borderStyle": "white",
+    "selectedColor": "#eb544d",
+    "list": [
+      {
+        "pagePath": "pages/components/index/index",
+        "text": "首页",
+        "iconPath": "./pages/icon/index.png",
+        "selectedIconPath": "./pages/icon/indexed.png"
+      },
+      {
+        "pagePath": "pages/components/classify/classify",
+        "text": "分类",
+        "iconPath": "./pages/icon/classify.png",
+        "selectedIconPath": "./pages/icon/classifyed.png"
+      },
+      {
+        "pagePath": "pages/components/mycart/mycart",
+        "text": "购物车",
+        "iconPath": "./pages/icon/mycart.png",
+        "selectedIconPath": "./pages/icon/mycarted.png"
+      },
+      {
+        "pagePath": "pages/components/personal/personal",
+        "text": "个人",
+        "iconPath": "./pages/icon/personal.png",
+        "selectedIconPath": "./pages/icon/personaled.png"
+      }
+    ]
+  }
+}
