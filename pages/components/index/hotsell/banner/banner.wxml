@@ -1,0 +1,19 @@
+<!--pages/components/index/banner/banner.wxml-->
+<!--轮播图-->
+<swiper
+circular="{{circular}}"
+indicator-dots="true"
+autoplay="true"
+interval="2000"
+duration="300"
+indicator-color="#fff"
+indicator-active-color="#eb544d"
+>
+  <block wx:for="{{imgUrls}}" wx:key="index">
+    <swiper-item>
+      <navigator url="#" hover-class="navigator-hover">
+        <image src="{{item.url}}" class="slide-image" width="355" height="200" />
+      </navigator>
+    </swiper-item>
+  </block>
+</swiper>

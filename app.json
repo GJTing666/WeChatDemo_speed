@@ -4,14 +4,17 @@
     "pages/components/personal/personal",
     "pages/components/navbar/navbar",
     "pages/components/classify/classify",
-    "pages/components/mycart/mycart"
+    "pages/components/mycart/mycart",
+    "pages/components/index/hotsell/banner/banner",
+    "pages/components/index/hotsell/hotsell"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "快宜点",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": false
+    "backgroundColor": "#eeeeee",
+    "enablePullDownRefresh": true
   },
   "style": "v2",
   "sitemapLocation": "sitemap.json",
@@ -40,7 +43,7 @@
       },
       {
         "pagePath": "pages/components/personal/personal",
-        "text": "个人",
+        "text": "我的",
         "iconPath": "./pages/icon/personal.png",
         "selectedIconPath": "./pages/icon/personaled.png"
       }

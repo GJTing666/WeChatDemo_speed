@@ -1,0 +1,72 @@
+<!--pages/components/index/hotsell/hotsell.wxml-->
+<view>
+  <include src="./banner/banner" />
+  <!-- 搜索框 -->
+  <view class="searchbox clearfix">
+    <!-- 选择器 -->
+    <view class="section fl">
+      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+        <view class="picker text-overflow">
+          {{region[2]}}
+        </view>
+      </picker>
+      <text class="mapicon iconfont icon-zhcc_xiangxiajiantou"></text>
+    </view>
+    <view class="search fl">
+      <input class="searchinput" value="{{searchValue}}" />
+      <text class="sraicon iconfont icon-sousuo"> 搜索</text>
+    </view>
+  </view>
+  <!-- 今日折扣 -->
+  <view class="swraper-item">
+    <view class="title clearfix">
+      今日折扣
+      <text class="en">Sell today</text>
+      <navigator class="more fr" url="#">更多>></navigator>
+    </view>
+    <view class="clearfix">
+      <view class="sellimg-l fl">
+        <image class="sellimg-l-img" src="/pages/images/banner-1.jpg"></image>
+      </view>
+      <view class="sellimg-r fl">
+        <view class="sellimg-r-top">
+          <image src="/pages/images/banner-3.jpg"></image>
+        </view>
+        <view class="sellimg-r-bottom">
+          <image src="/pages/images/banner-4.jpg"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 热门销售 -->
+  <view class="swraper-item">
+    <view class="title clearfix">
+      热门销售
+      <text class="en">Hot sales</text>
+      <navigator class="more fr" url="#">更多>></navigator>
+    </view>
+    <view class="clearfix">
+      <view class="hotsale-img">
+        <image src="/pages/images/4.png"></image>
+      </view>
+      <view class="hotsale-cont clearfix">
+        <view class="hotsale-item fl">
+          <navigator url="#">
+            <view class="goods-img">
+              <image src="/pages/images/goods.png"></image>
+            </view>
+            <view class="goods-title text-overflow">
+              <text>奇欧比 巧克力松露抹茶酒心味</text>
+            </view>
+          </navigator>
+        </view>
+        <view class="hotsale-item fl">
+          <navigator url="#">asdsasdasdasdadsad</navigator>
+        </view>
+        <view class="hotsale-item fl">
+          <navigator url="#">asdasdasdadasdasd</navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

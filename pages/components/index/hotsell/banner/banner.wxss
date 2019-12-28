@@ -1,0 +1,20 @@
+/* pages/components/index/banner/banner.wxss */
+/*轮播图*/
+swiper {
+  height: 200px;
+}
+.slide-image {
+  width: 100%;
+}
+wx-swiper .wx-swiper-dot-active{
+  width: 40rpx;
+  border-radius: 20rpx;
+}
+.section{
+  width: 136rpx;
+  height: 80rpx;
+  padding-left: 24rpx;
+  line-height: 80rpx;
+  font-size: 30rpx;
+  position: relative;
+}
