@@ -32,19 +32,38 @@ var navData = [{
 var imgUrls =  [
   {
   link: '/pages/index/index',
-  url: '/pages/images/banner-1.jpg'
+  url: '/pages/images/1.png'
   }, {
     link: '/pages/list/list',
-    url: '/pages/images/banner-3.jpg'
+    url: '/pages/images/4.png'
   }, {
     link: '/pages/list/list',
-    url: '/pages/images/banner-4.jpg'
-  }, {
-    link: '/pages/list/list',
-    url: '/pages/images/banner-5.jpg'
+    url: '/pages/images/6.png'
   }]
+
+/**
+ * 创建商品数据
+ */
+var goodsLists = [
+  {
+    gname: '奇欧比 巧克力松露抹茶酒心味夹心奶糖',
+    gprice: 49.99,
+    gimg: '/pages/images/goods.png'
+  },
+  {
+    gname: '奇欧比 巧克力松露抹茶酒心味夹心奶糖',
+    gprice: 47.99,
+    gimg: '/pages/images/goods.png'
+  },
+  {
+    gname: '奇欧比 巧克力松露抹茶酒心味夹心奶糖',
+    gprice: 48.69,
+    gimg: '/pages/images/goods.png'
+  }
+]
 
 module.exports = {
   navData: navData,
-  imgUrls: imgUrls
+  imgUrls: imgUrls,
+  goodsLists: goodsLists
 }

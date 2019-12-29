@@ -24,7 +24,7 @@
 .search{
   width: 260px;
   height: 100%;
-  margin-left: 24rpx;
+  margin-right: 4%;
   background: rgba(255, 255, 255, .4);
   border-radius: 40rpx;
   overflow: hidden;
@@ -34,7 +34,7 @@
   color: #fff;
   position: absolute;
   top: 50%;
-  right: 0;
+  right: -30rpx;
   transform: translateY(-50%)
 }
 .search .searchinput{

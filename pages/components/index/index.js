@@ -1,6 +1,7 @@
 // pages/index/index.js
 var navData = require("../data/data.js")
 var imgUrls = require("../data/data.js")
+var goodsLists = require("../data/data.js")
 var app = getApp();
 Page({
   data: {
@@ -53,7 +54,8 @@ Page({
     // 导入data数据
     that.setData({
       navData: navData.navData,
-      imgUrls: imgUrls.imgUrls
+      imgUrls: imgUrls.imgUrls,
+      goodsLists: goodsLists.goodsLists
     })
     // 高度自适应
     wx.getSystemInfo({
@@ -63,7 +65,6 @@ Page({
           rpxR = 750 / clientWidth;
         // var calc = clientHeight * rpxR - 120;
         var calc = clientHeight * rpxR;
-        console.log(calc)
         that.setData({
           winHeight: calc
         });

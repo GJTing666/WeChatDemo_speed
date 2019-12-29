@@ -1,72 +1,212 @@
 <!--pages/components/index/hotsell/hotsell.wxml-->
 <view>
-  <include src="./banner/banner" />
-  <!-- 搜索框 -->
-  <view class="searchbox clearfix">
-    <!-- 选择器 -->
-    <view class="section fl">
-      <picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
-        <view class="picker text-overflow">
-          {{region[2]}}
+	<include src="./banner/banner" />
+	<!-- 搜索框 -->
+	<view class="searchbox clearfix">
+		<!-- 选择器 -->
+		<view class="section fl">
+			<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+				<view class="picker text-overflow">
+					{{region[2]}}
+				</view>
+			</picker>
+			<text class="mapicon iconfont icon-zhcc_xiangxiajiantou"></text>
+		</view>
+		<view class="search fr">
+			<input class="searchinput" value="{{searchValue}}" />
+			<text class="sraicon iconfont icon-sousuo"> 搜索</text>
+		</view>
+	</view>
+	<!-- 今日折扣 -->
+	<view class="swraper-item">
+		<view class="title clearfix">
+			今日折扣
+			<text class="en color-blue">Sell today</text>
+			<navigator class="more fr" url="#">更多>></navigator>
+		</view>
+		<view class="clearfix">
+			<view class="sellimg-l fl">
+        <view>
+          <text class="sell-tit overflow">奇欧比 巧克力松露抹茶酒心味夹心奶糖</text>
         </view>
-      </picker>
-      <text class="mapicon iconfont icon-zhcc_xiangxiajiantou"></text>
-    </view>
-    <view class="search fl">
-      <input class="searchinput" value="{{searchValue}}" />
-      <text class="sraicon iconfont icon-sousuo"> 搜索</text>
-    </view>
-  </view>
-  <!-- 今日折扣 -->
-  <view class="swraper-item">
-    <view class="title clearfix">
-      今日折扣
-      <text class="en">Sell today</text>
-      <navigator class="more fr" url="#">更多>></navigator>
-    </view>
-    <view class="clearfix">
-      <view class="sellimg-l fl">
-        <image class="sellimg-l-img" src="/pages/images/banner-1.jpg"></image>
-      </view>
-      <view class="sellimg-r fl">
-        <view class="sellimg-r-top">
-          <image src="/pages/images/banner-3.jpg"></image>
+        <view>
+          <text class="sell-pri">低至49.5元/件</text>
         </view>
-        <view class="sellimg-r-bottom">
-          <image src="/pages/images/banner-4.jpg"></image>
+        <view class="selltoimg-box">
+          <image class="selltoimg" src="/pages/images/goods.png"></image>
         </view>
-      </view>
-    </view>
-  </view>
-  <!-- 热门销售 -->
-  <view class="swraper-item">
-    <view class="title clearfix">
-      热门销售
-      <text class="en">Hot sales</text>
-      <navigator class="more fr" url="#">更多>></navigator>
-    </view>
-    <view class="clearfix">
-      <view class="hotsale-img">
-        <image src="/pages/images/4.png"></image>
-      </view>
-      <view class="hotsale-cont clearfix">
-        <view class="hotsale-item fl">
-          <navigator url="#">
-            <view class="goods-img">
-              <image src="/pages/images/goods.png"></image>
+			</view>
+			<view class="sellimg-r fl">
+				<view class="sellimg-r-top clearfix">
+          <view class="sell-r-top fl">
+            <text class="sell-tit overflow">奇欧比 巧克力松露抹茶酒心味夹心奶糖</text>
+            <text class="sell-pri">仅需49.5元/件</text>
+          </view>
+          <view class="sell-r-img fl">
+            <image class="selltxtimg" src="/pages/images/goods.png"></image>
+          </view>
+				</view>
+				<view class="sellimg-r-bottom clearfix">
+          <view class="sell-r-bottom fl">
+            <text class="sell-tit overflow">奇欧比 巧克力松露抹茶酒心味夹心奶糖</text>
+            <text class="sell-pri">仅需49.5元/件</text>
+          </view>
+          <view class="sell-r-img fl">
+            <image class="selltxtimg" src="/pages/images/goods.png"></image>
+          </view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 热门销售 -->
+	<view class="swraper-item">
+		<view class="title clearfix">
+			热门销售
+			<text class="en color-main">Hot sales</text>
+			<navigator class="more fr" url="#">更多>></navigator>
+		</view>
+		<view class="clearfix">
+			<view class="hotsale-img">
+				<image src="/pages/images/4.png"></image>
+			</view>
+			<view class="hotsale-cont clearfix">
+				<view class="hotsale-item fl" wx:for="{{goodsLists}}" wx:key="index">
+					<view class="hotsale-box">
+						<navigator url="#">
+							<view class="goods-img">
+								<image src="{{item.gimg}}"></image>
+							</view>
+							<view class="goods-text">
+								<text class="goods-title overflow">{{item.gname}}</text>
+								<text class="goods-price color-main">￥{{item.gprice}}</text>
+							</view>
+						</navigator>
+            <view class="goods-gwc">
+              <text class="iconfont icon-ziyuan"></text>
             </view>
-            <view class="goods-title text-overflow">
-              <text>奇欧比 巧克力松露抹茶酒心味</text>
+						<view class="goods-tip">
+							<image class="bgimg" src="/pages/images/12.png" mode="aspectFill"></image>
+							<text class="goods-tip-txt">本店现货</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 休闲零食 -->
+	<view class="swraper-item">
+		<view class="title clearfix">
+			休闲零食
+			<text class="en color-main">Casual snacks</text>
+			<navigator class="more fr" url="#">更多>></navigator>
+		</view>
+		<view class="clearfix">
+			<view class="hotsale-img">
+				<image src="/pages/images/6.png"></image>
+			</view>
+			<view class="hotsale-cont clearfix">
+				<view class="hotsale-item fl" wx:for="{{goodsLists}}" wx:key="index">
+					<view class="hotsale-box">
+						<navigator url="#">
+							<view class="goods-img">
+								<image src="{{item.gimg}}"></image>
+							</view>
+							<view class="goods-text">
+								<text class="goods-title overflow">{{item.gname}}</text>
+								<text class="goods-price color-main">￥{{item.gprice}}</text>
+							</view>
+						</navigator>
+            <view class="goods-gwc">
+              <text class="iconfont icon-ziyuan"></text>
             </view>
-          </navigator>
-        </view>
-        <view class="hotsale-item fl">
-          <navigator url="#">asdsasdasdasdadsad</navigator>
-        </view>
-        <view class="hotsale-item fl">
-          <navigator url="#">asdasdasdadasdasd</navigator>
-        </view>
-      </view>
-    </view>
-  </view>
+						<view class="goods-tip">
+							<image class="bgimg" src="/pages/images/12.png" mode="aspectFill"></image>
+							<text class="goods-tip-txt">本店现货</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+  <!-- 酒水饮料 -->
+  <view class="swraper-item">
+		<view class="title clearfix">
+			酒水饮料
+			<text class="en color-main">Drinks</text>
+			<navigator class="more fr" url="#">更多>></navigator>
+		</view>
+		<view class="clearfix">
+			<view class="hotsale-img">
+				<image src="/pages/images/6.png"></image>
+			</view>
+			<view class="hotsale-cont clearfix">
+				<view class="hotsale-item fl" wx:for="{{goodsLists}}" wx:key="index">
+					<view class="hotsale-box">
+						<navigator url="#">
+							<view class="goods-img">
+								<image src="{{item.gimg}}"></image>
+							</view>
+							<view class="goods-text">
+								<text class="goods-title overflow">{{item.gname}}</text>
+								<text class="goods-price color-main">￥{{item.gprice}}</text>
+							</view>
+						</navigator>
+            <view class="goods-gwc">
+              <text class="iconfont icon-ziyuan"></text>
+            </view>
+						<view class="goods-tip">
+							<image class="bgimg" src="/pages/images/12.png" mode="aspectFill"></image>
+							<text class="goods-tip-txt">本店现货</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+  <!-- 全部商品 -->
+  <view class="swraper-item">
+		<view class="title clearfix">
+			全部商品
+			<text class="en color-main">Explore</text>
+			<navigator class="more fr" url="#">更多>></navigator>
+		</view>
+		<view class="explore clearfix">
+			<view class="hotsale-cont clearfix">
+        <view class="hotsale-item fl" style="height:188px;">
+					<view class="explore-box">
+            <view class="ex-onecont text-center">
+              <view class="ex-tit">休闲零食</view>
+              <view class="ex-cont">零食狂欢节</view>
+              <view class="ex-qianggou">
+                <text class="ex-qgtxt">立即抢购</text>
+              </view>
+              <view class="ex-imgbox">
+                <image src="/pages/images/goods.png"></image>
+              </view>
+            </view>
+          </view>
+				</view>
+				<view class="hotsale-item fl" wx:for="{{goodsLists}}" wx:key="index">
+					<view class="hotsale-box">
+						<navigator url="#">
+							<view class="goods-img">
+								<image src="{{item.gimg}}"></image>
+							</view>
+							<view class="goods-text">
+								<text class="goods-title overflow">{{item.gname}}</text>
+								<text class="goods-price color-main">￥{{item.gprice}}</text>
+							</view>
+						</navigator>
+            <view class="goods-gwc">
+              <text class="iconfont icon-ziyuan"></text>
+            </view>
+						<view class="goods-tip">
+							<image class="bgimg" src="/pages/images/12.png" mode="aspectFill"></image>
+							<text class="goods-tip-txt">本店现货</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
 </view>

@@ -11,9 +11,9 @@ wx-swiper .wx-swiper-dot-active{
   border-radius: 20rpx;
 }
 .section{
-  width: 136rpx;
+  width: 120rpx;
   height: 80rpx;
-  padding-left: 24rpx;
+  padding-left: 3%;
   line-height: 80rpx;
   font-size: 30rpx;
   position: relative;

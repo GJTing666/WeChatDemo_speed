@@ -18,7 +18,7 @@
       <swiper-item>
         <scroll-view scroll-y="true" class="scoll-h">
           <block>
-            <view>asdsad</view>
+            <view>现货内容</view>
           </block>
         </scroll-view>
       </swiper-item>
@@ -28,7 +28,7 @@
           <block wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14]}}" wx:key="*this">
             <view class="item-ans">
               <view class="avatar">
-                <image class="img" src="../../icon/info.png"></image>
+                <image class="img" src="/pages/images/1.png"></image>
               </view>
               <view class="expertInfo">
                 <view class="name">淳于晗歌</view>
