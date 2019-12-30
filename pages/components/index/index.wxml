@@ -3,27 +3,35 @@
   <!-- 顶部导航条 -->
   <view>
     <!-- 导航条 -->
-    <include src="../navbar/navbar.wxml" />
+    <include src="/pages/components/navbar/navbar.wxml" />
     <!-- 导航内容 -->
     <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab" style="height:{{winHeight}}rpx">
       <!-- 热销 -->
-      <swiper-item class="rexiao">
+      <swiper-item class="rexiao position">
         <scroll-view scroll-y="true" class="scoll-h">
           <block>
-            <include src="./hotsell/hotsell" />
+            <include src="./hotsell/hotsell.wxml" />
           </block>
         </scroll-view>
       </swiper-item>
-      <!-- 其他 -->
-      <swiper-item>
+      <!-- 现货 -->
+      <swiper-item class="position">
         <scroll-view scroll-y="true" class="scoll-h">
           <block>
             <view>现货内容</view>
           </block>
         </scroll-view>
       </swiper-item>
+      <!-- 零食 -->
+      <swiper-item class="position">
+        <scroll-view scroll-y="true" class="scoll-h">
+          <block>
+            <include src="./snacks/snacks.wxml" />
+          </block>
+        </scroll-view>
+      </swiper-item>
       <!-- 其他 -->
-      <swiper-item wx:for="{{[0,1,2,3,4,5,6]}}" wx:key="id">
+      <swiper-item wx:for="{{[0,1,2,3,4]}}" wx:key="id">
         <scroll-view scroll-y="true" class="scoll-h">
           <block wx:for="{{[1,2,3,4,5,6,7,8,9,10,11,12,13,14]}}" wx:key="*this">
             <view class="item-ans">

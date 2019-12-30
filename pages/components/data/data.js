@@ -8,7 +8,7 @@ var navData = [{
     text: '现货'
   },
   {
-    text: '酒饮'
+    text: '零食'
   },
   {
     text: '美护'

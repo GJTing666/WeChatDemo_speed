@@ -1,0 +1,30 @@
+<!--pages/components/index/snacks/snacks.wxml-->
+<view>
+  <include src="/pages/components/banner/banner.wxml" />
+	<!-- 搜索框 -->
+	<view class="searchbox clearfix">
+		<!-- 选择器 -->
+		<view class="section fl">
+			<picker mode="region" bindchange="bindRegionChange" value="{{region}}" custom-item="{{customItem}}">
+				<view class="picker text-overflow">
+					{{region[2]}}
+				</view>
+			</picker>
+			<text class="mapicon iconfont icon-zhcc_xiangxiajiantou"></text>
+		</view>
+		<view class="search fr">
+			<input class="searchinput" value="{{searchValue}}" />
+			<text class="sraicon iconfont icon-sousuo"> 搜索</text>
+		</view>
+	</view>
+  <!-- 内容 -->
+  <view class="snack">
+    <view class="snack-list position">
+      <view class="snack-imgbox">
+        <image class="snack-img" src="/pages/images/goods.png"></image>
+      </view>
+      <view class="snack-title overflow">大笨象会跳舞 小猴子会上树 护理会干跟斗</view>
+      <view class="snack-price">￥49.90</view>
+    </view>
+  </view>
+</view>

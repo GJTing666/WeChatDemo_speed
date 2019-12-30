@@ -5,14 +5,16 @@
 @import "../navbar/navbar.wxss";
 /* 热销 */
 @import "./hotsell/hotsell.wxss";
+/* 零食 */
+@import "./snacks/snacks.wxss";
 /* 轮播 */
-@import "./hotsell/banner/banner.wxss";
+@import "/pages/components/banner/banner.wxss";
 
 .rexiao{
   position: relative;
   background-color: #eeeeee;
 }
-.rexiao .searchbox{
+.position .searchbox{
   width: 100%;
   height: 80rpx;
   position: absolute;

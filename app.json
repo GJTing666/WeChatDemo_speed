@@ -5,8 +5,9 @@
     "pages/components/navbar/navbar",
     "pages/components/classify/classify",
     "pages/components/mycart/mycart",
-    "pages/components/index/hotsell/banner/banner",
-    "pages/components/index/hotsell/hotsell"
+    "pages/components/banner/banner",
+    "pages/components/index/hotsell/hotsell",
+    "pages/components/index/snacks/snacks"
   ],
   "window": {
     "backgroundTextStyle": "dark",

@@ -1,6 +1,6 @@
 <!--pages/components/index/hotsell/hotsell.wxml-->
 <view>
-	<include src="./banner/banner" />
+	<include src="/pages/components/banner/banner.wxml" />
 	<!-- 搜索框 -->
 	<view class="searchbox clearfix">
 		<!-- 选择器 -->
@@ -172,7 +172,7 @@
 		</view>
 		<view class="explore clearfix">
 			<view class="hotsale-cont clearfix">
-        <view class="hotsale-item fl" style="height:188px;">
+        <view class="hotsale-item fl" style="height:176px;">
 					<view class="explore-box">
             <view class="ex-onecont text-center">
               <view class="ex-tit">休闲零食</view>

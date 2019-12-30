@@ -1,6 +1,6 @@
 /* pages/components/navbar/navbar.wxss */
 /* 导航栏样式 */
-.tab-h {
+.tab-nav {
   height: 80rpx;
   width: 100%;
   box-sizing: border-box;
